@@ -2,7 +2,8 @@ import twitter2
 
 
 def main():
-    dicti = twitter2.get_json()
+    print('')
+    dicti = twitter2.get_json(input('Enter Twitter Account:'))
     while type(dicti) == dict or type(dicti) == list:
         try:
             if type(dicti) == dict:
