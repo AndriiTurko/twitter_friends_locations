@@ -9,7 +9,7 @@ import ssl
 TWITTER_URL = 'https://api.twitter.com/1.1/friends/list.json'
 
 
-def get_json():
+def get_json(acct):
     # Ignore SSL certificate errors
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
@@ -17,7 +17,6 @@ def get_json():
 
     while True:
         print('')
-        acct = input('Enter Twitter Account:')
         if (len(acct) < 1): break
         url = twurl.augment(TWITTER_URL,
                             {'screen_name': acct, 'count': '300'})

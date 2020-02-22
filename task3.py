@@ -8,7 +8,8 @@ def get_key_info(key):
     (str) -> (list)
     Returns the info, chosen by key, about one friend of user.
     '''
-    users_info = twitter2.get_json()['users']
+    print('')
+    users_info = twitter2.get_json(acct = input('Enter Twitter Account:'))['users']
     lst = [(users_info[i]['screen_name'], users_info[i][key])
            for i in range(len(users_info))]
     return lst
