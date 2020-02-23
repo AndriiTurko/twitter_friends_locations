@@ -41,7 +41,6 @@ def build_map(user_name):
                                          popup=lst[i][0],
                                          icon=folium.Icon(color='green')))
 
-    user_map.save('friends.html')
+    user_map.save('templates/friends.html')
 
-# if __name__ == "__main__":
-#     build_map('DrewTurko')
+
