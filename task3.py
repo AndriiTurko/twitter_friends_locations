@@ -3,17 +3,6 @@ import twitter2
 from geopy.geocoders import Nominatim
 
 
-def get_key_info(key):
-    '''
-    (str) -> (list)
-    Returns the info, chosen by key, about one friend of user.
-    '''
-    print('')
-    users_info = twitter2.get_json(acct = input('Enter Twitter Account:'))['users']
-    lst = [(users_info[i]['screen_name'], users_info[i][key])
-           for i in range(len(users_info))]
-    return lst
-
 
 def get_coordinates(location):
     '''
@@ -29,11 +18,15 @@ def get_coordinates(location):
         return None
 
 
-def build_map():
+def build_map(user_name):
     '''
     Builds map with user's friends locations.
     '''
-    locations = get_key_info('location')
+    print('')
+    users_info = twitter2.get_json(user_name)['users']
+    locations = [(users_info[i]['screen_name'], users_info[i]['location'])
+           for i in range(len(users_info))]
+
     lst = [(locations[i][0], get_coordinates(locations[i][1]))
            for i in range(len(locations))
            if locations[i][0] != '' and locations[i][1] != '']
@@ -50,5 +43,5 @@ def build_map():
 
     user_map.save('friends.html')
 
-if __name__ == "__main__":
-    build_map()
+# if __name__ == "__main__":
+#     build_map('DrewTurko')
