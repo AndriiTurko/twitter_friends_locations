@@ -3,6 +3,14 @@ from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__)
 
+
+def before_request():
+    app.jinja_env.cache = {}
+
+
+app.before_request(before_request)
+
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     print("INDEX")
