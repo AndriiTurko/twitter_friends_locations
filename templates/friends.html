@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_46caf414974b444db7a3af33ea978a1f {
+                #map_53bac3c24879427da02e1cb3b2a36680 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,16 +32,19 @@
                 }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>    
     
-            <div class="folium-map" id="map_46caf414974b444db7a3af33ea978a1f" ></div>
+            <div class="folium-map" id="map_53bac3c24879427da02e1cb3b2a36680" ></div>
         
 </body>
 <script>    
     
-            var map_46caf414974b444db7a3af33ea978a1f = L.map(
-                "map_46caf414974b444db7a3af33ea978a1f",
+            var map_53bac3c24879427da02e1cb3b2a36680 = L.map(
+                "map_53bac3c24879427da02e1cb3b2a36680",
                 {
                     center: [0, 0],
                     crs: L.CRS.EPSG3857,
@@ -55,32 +58,640 @@
 
         
     
-            var tile_layer_48f9f73d35db49ec8d391a608111a071 = L.tileLayer(
-                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_46caf414974b444db7a3af33ea978a1f);
+            var tile_layer_40b73e4e09ed46948a3f479ed1bc3e0b = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_53bac3c24879427da02e1cb3b2a36680);
         
     
-            var marker_3d562a667b4a457bb7cbfb0eca4b27ea = L.marker(
-                [43.1150678, 131.8855768],
+            var marker_cluster_7853c360504c408480d4b2ebbba9685f = L.markerClusterGroup(
                 {}
-            ).addTo(map_46caf414974b444db7a3af33ea978a1f);
-        
-    
-            var icon_d19d8689fd374246add0f43d3486af6d = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_3d562a667b4a457bb7cbfb0eca4b27ea.setIcon(icon_d19d8689fd374246add0f43d3486af6d);
+            map_53bac3c24879427da02e1cb3b2a36680.addLayer(marker_cluster_7853c360504c408480d4b2ebbba9685f);
         
     
-        var popup_707528849e82479bbef9da8f1ebefbd6 = L.popup({"maxWidth": "100%"});
+            var circle_marker_5ead948c48214e7c9c6ebcb68d0951f1 = L.circleMarker(
+                [40.7127281, -74.0060152],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_6273c24b830b403eb799946447dd23c0 = L.popup({"maxWidth": "100%"});
 
         
-            var html_668fb1e929f54e6cb469ce692853e95f = $(`<div id="html_668fb1e929f54e6cb469ce692853e95f" style="width: 100.0%; height: 100.0%;">DrewTurko</div>`)[0];
-            popup_707528849e82479bbef9da8f1ebefbd6.setContent(html_668fb1e929f54e6cb469ce692853e95f);
+            var html_4b942901b4de47879f2f1aff4c1f0832 = $(`<div id="html_4b942901b4de47879f2f1aff4c1f0832" style="width: 100.0%; height: 100.0%;">Tasha Keeney, Sam Korus, Cathie Wood, Neil deGrasse Tyson, Scientific American, Maye Musk, The New York Review of Books</div>`)[0];
+            popup_6273c24b830b403eb799946447dd23c0.setContent(html_4b942901b4de47879f2f1aff4c1f0832);
         
 
-        marker_3d562a667b4a457bb7cbfb0eca4b27ea.bindPopup(popup_707528849e82479bbef9da8f1ebefbd6)
+        circle_marker_5ead948c48214e7c9c6ebcb68d0951f1.bindPopup(popup_6273c24b830b403eb799946447dd23c0)
+        ;
+
+        
+    
+    
+            var circle_marker_a662adfa22c04c8eb8c2ac6e645f9808 = L.circleMarker(
+                [3.5000086, -73.0000086],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_00c91725b29a447dac4342a0dea7e042 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4251c68adbbf44ae83ffc00abdc8234d = $(`<div id="html_4251c68adbbf44ae83ffc00abdc8234d" style="width: 100.0%; height: 100.0%;">Archillect</div>`)[0];
+            popup_00c91725b29a447dac4342a0dea7e042.setContent(html_4251c68adbbf44ae83ffc00abdc8234d);
+        
+
+        circle_marker_a662adfa22c04c8eb8c2ac6e645f9808.bindPopup(popup_00c91725b29a447dac4342a0dea7e042)
+        ;
+
+        
+    
+    
+            var circle_marker_79d1ca1b2930412ca6b938b74f8b5b78 = L.circleMarker(
+                [54.698056, -112.147222],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_c8002c9cdcb646179a26d2b2af989d39 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_351de8fa4ba2494b9a0e9b771d78274e = $(`<div id="html_351de8fa4ba2494b9a0e9b771d78274e" style="width: 100.0%; height: 100.0%;">Brett Winton</div>`)[0];
+            popup_c8002c9cdcb646179a26d2b2af989d39.setContent(html_351de8fa4ba2494b9a0e9b771d78274e);
+        
+
+        circle_marker_79d1ca1b2930412ca6b938b74f8b5b78.bindPopup(popup_c8002c9cdcb646179a26d2b2af989d39)
+        ;
+
+        
+    
+    
+            var circle_marker_78248257c97d43ceb6ee73ef81902fff = L.circleMarker(
+                [35.6828387, 139.7594549],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_2b8d6e9dc3da4f48a0ffaac79a1f1fd9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d0f7777bc874ef0a71acdc1c73ff3c3 = $(`<div id="html_9d0f7777bc874ef0a71acdc1c73ff3c3" style="width: 100.0%; height: 100.0%;">HIROMICHI MIZUNO</div>`)[0];
+            popup_2b8d6e9dc3da4f48a0ffaac79a1f1fd9.setContent(html_9d0f7777bc874ef0a71acdc1c73ff3c3);
+        
+
+        circle_marker_78248257c97d43ceb6ee73ef81902fff.bindPopup(popup_2b8d6e9dc3da4f48a0ffaac79a1f1fd9)
+        ;
+
+        
+    
+    
+            var circle_marker_30740d12a0144f38bba576770c34f559 = L.circleMarker(
+                [38.8948932, -77.0365529],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_d6e91dc856fd405090f374723381dc84 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d2bc0a62897484bb8fa1a0b51194bad = $(`<div id="html_1d2bc0a62897484bb8fa1a0b51194bad" style="width: 100.0%; height: 100.0%;">Jim Bridenstine</div>`)[0];
+            popup_d6e91dc856fd405090f374723381dc84.setContent(html_1d2bc0a62897484bb8fa1a0b51194bad);
+        
+
+        circle_marker_30740d12a0144f38bba576770c34f559.bindPopup(popup_d6e91dc856fd405090f374723381dc84)
+        ;
+
+        
+    
+    
+            var circle_marker_559a26b8fc48494d809798e6f4410578 = L.circleMarker(
+                [38.8339578, -104.8253485],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_c7e0031a1d254ef8ba426dcdee615907 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ce1ca8ec6e844c8e8ef8c672b6475043 = $(`<div id="html_ce1ca8ec6e844c8e8ef8c672b6475043" style="width: 100.0%; height: 100.0%;">Gen. Jay Raymond</div>`)[0];
+            popup_c7e0031a1d254ef8ba426dcdee615907.setContent(html_ce1ca8ec6e844c8e8ef8c672b6475043);
+        
+
+        circle_marker_559a26b8fc48494d809798e6f4410578.bindPopup(popup_c7e0031a1d254ef8ba426dcdee615907)
+        ;
+
+        
+    
+    
+            var circle_marker_f82cf2a51155492599bfa252ae4de47e = L.circleMarker(
+                [38.8222878, -104.70028027543265],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_c1ad3c4b18984a3f96fe8d06995b8d87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_925433b3635848038cf494fd36d59273 = $(`<div id="html_925433b3635848038cf494fd36d59273" style="width: 100.0%; height: 100.0%;">United States Space Force</div>`)[0];
+            popup_c1ad3c4b18984a3f96fe8d06995b8d87.setContent(html_925433b3635848038cf494fd36d59273);
+        
+
+        circle_marker_f82cf2a51155492599bfa252ae4de47e.bindPopup(popup_c1ad3c4b18984a3f96fe8d06995b8d87)
+        ;
+
+        
+    
+    
+            var circle_marker_bb198ea0ba3d47f7bd737482a528e46a = L.circleMarker(
+                [37.7790262, -122.4199061],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_18967eba8f554d68be01033722267cd8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2682d2669c545009399f64973b45d05 = $(`<div id="html_a2682d2669c545009399f64973b45d05" style="width: 100.0%; height: 100.0%;">Shivon Zilis</div>`)[0];
+            popup_18967eba8f554d68be01033722267cd8.setContent(html_a2682d2669c545009399f64973b45d05);
+        
+
+        circle_marker_bb198ea0ba3d47f7bd737482a528e46a.bindPopup(popup_18967eba8f554d68be01033722267cd8)
+        ;
+
+        
+    
+    
+            var circle_marker_4914661e9e2644c38963106f00f61b5c = L.circleMarker(
+                [36.7014631, -118.7559974],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_af80cb93856e40e986f66a524b8b7de9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_55f00c851d604fb7ae3fd4649ca01804 = $(`<div id="html_55f00c851d604fb7ae3fd4649ca01804" style="width: 100.0%; height: 100.0%;">TESLARATI, George Zachary</div>`)[0];
+            popup_af80cb93856e40e986f66a524b8b7de9.setContent(html_55f00c851d604fb7ae3fd4649ca01804);
+        
+
+        circle_marker_4914661e9e2644c38963106f00f61b5c.bindPopup(popup_af80cb93856e40e986f66a524b8b7de9)
+        ;
+
+        
+    
+    
+            var circle_marker_e4b476dfce164595afcf42c7432d582c = L.circleMarker(
+                [29.7589382, -95.3676974],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_43d03f571277478dbe5e6fca91076bdb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b20020d5ea4491fa881d13e0eadae9d = $(`<div id="html_1b20020d5ea4491fa881d13e0eadae9d" style="width: 100.0%; height: 100.0%;">Eric Berger</div>`)[0];
+            popup_43d03f571277478dbe5e6fca91076bdb.setContent(html_1b20020d5ea4491fa881d13e0eadae9d);
+        
+
+        circle_marker_e4b476dfce164595afcf42c7432d582c.bindPopup(popup_43d03f571277478dbe5e6fca91076bdb)
+        ;
+
+        
+    
+    
+            var circle_marker_a467542c41524463977f088eb8015dd9 = L.circleMarker(
+                [38.8051095, -77.0470229],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_4dd1fecbaa404554ac5b76e8a0655bda = L.popup({"maxWidth": "100%"});
+
+        
+            var html_22b949e3fd6341ed9de459ff82f2fd31 = $(`<div id="html_22b949e3fd6341ed9de459ff82f2fd31" style="width: 100.0%; height: 100.0%;">Brian Berger</div>`)[0];
+            popup_4dd1fecbaa404554ac5b76e8a0655bda.setContent(html_22b949e3fd6341ed9de459ff82f2fd31);
+        
+
+        circle_marker_a467542c41524463977f088eb8015dd9.bindPopup(popup_4dd1fecbaa404554ac5b76e8a0655bda)
+        ;
+
+        
+    
+    
+            var circle_marker_6c416634067746f1a3a6a2555eb56af2 = L.circleMarker(
+                [42.3750997, -71.1056157],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_461ecf6b1bf14c289a583c1e3e4a2773 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0548ebba22049bea83e21a041490e3f = $(`<div id="html_c0548ebba22049bea83e21a041490e3f" style="width: 100.0%; height: 100.0%;">Lex Fridman</div>`)[0];
+            popup_461ecf6b1bf14c289a583c1e3e4a2773.setContent(html_c0548ebba22049bea83e21a041490e3f);
+        
+
+        circle_marker_6c416634067746f1a3a6a2555eb56af2.bindPopup(popup_461ecf6b1bf14c289a583c1e3e4a2773)
+        ;
+
+        
+    
+    
+            var circle_marker_f8349d9136164b2da63efe0d548b8029 = L.circleMarker(
+                [14.5865972, 121.1374343],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_3d259fa3b5b349bab20dbdd250d5c893 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_427a39f7acbb4d0b8d0bb2eaef6c2e5b = $(`<div id="html_427a39f7acbb4d0b8d0bb2eaef6c2e5b" style="width: 100.0%; height: 100.0%;">Mars</div>`)[0];
+            popup_3d259fa3b5b349bab20dbdd250d5c893.setContent(html_427a39f7acbb4d0b8d0bb2eaef6c2e5b);
+        
+
+        circle_marker_f8349d9136164b2da63efe0d548b8029.bindPopup(popup_3d259fa3b5b349bab20dbdd250d5c893)
+        ;
+
+        
+    
+    
+            var circle_marker_45ae549149f64ad694fd2c2c6b163056 = L.circleMarker(
+                [51.5073219, -0.1276474],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_fceb7530e50f4cef9f1113bf499efb42 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a84ad60b40724ebd92742818c4dd2835 = $(`<div id="html_a84ad60b40724ebd92742818c4dd2835" style="width: 100.0%; height: 100.0%;">BBC Science News, BBC Comedy, The Royal Society, BBC Breaking News, CGP Grey 🐝</div>`)[0];
+            popup_fceb7530e50f4cef9f1113bf499efb42.setContent(html_a84ad60b40724ebd92742818c4dd2835);
+        
+
+        circle_marker_45ae549149f64ad694fd2c2c6b163056.bindPopup(popup_fceb7530e50f4cef9f1113bf499efb42)
+        ;
+
+        
+    
+    
+            var circle_marker_1b4c2ccced9a41808d1369346c9d2b1e = L.circleMarker(
+                [53.5120412, -2.2434612],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_7a49c9ced8804b829fdcca410eb5bf71 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2a69efc0438f4e258e5ac3c30d493cf3 = $(`<div id="html_2a69efc0438f4e258e5ac3c30d493cf3" style="width: 100.0%; height: 100.0%;">Nature News & Comment, New Scientist</div>`)[0];
+            popup_7a49c9ced8804b829fdcca410eb5bf71.setContent(html_2a69efc0438f4e258e5ac3c30d493cf3);
+        
+
+        circle_marker_1b4c2ccced9a41808d1369346c9d2b1e.bindPopup(popup_7a49c9ced8804b829fdcca410eb5bf71)
+        ;
+
+        
+    
+    
+            var circle_marker_9cd9c8f82e5c4f3782ae99500a76a8bf = L.circleMarker(
+                [-33.88831175, 151.161167156791],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_4cdd7e17027341af8098faac22e6c3f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5fcee60f69bf4187a2935b816c13c638 = $(`<div id="html_5fcee60f69bf4187a2935b816c13c638" style="width: 100.0%; height: 100.0%;">The Stoic Emperor</div>`)[0];
+            popup_4cdd7e17027341af8098faac22e6c3f0.setContent(html_5fcee60f69bf4187a2935b816c13c638);
+        
+
+        circle_marker_9cd9c8f82e5c4f3782ae99500a76a8bf.bindPopup(popup_4cdd7e17027341af8098faac22e6c3f0)
+        ;
+
+        
+    
+    
+            var circle_marker_d0dae3d68ab64cb18eeab05d0e2e970d = L.circleMarker(
+                [40.7750395, -90.8320824],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_57aa1b65539543dbbfcc1b4eacfb05e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_827b2ee831bb4bee981643a691a4c78f = $(`<div id="html_827b2ee831bb4bee981643a691a4c78f" style="width: 100.0%; height: 100.0%;">Dan Carlin</div>`)[0];
+            popup_57aa1b65539543dbbfcc1b4eacfb05e1.setContent(html_827b2ee831bb4bee981643a691a4c78f);
+        
+
+        circle_marker_d0dae3d68ab64cb18eeab05d0e2e970d.bindPopup(popup_57aa1b65539543dbbfcc1b4eacfb05e1)
+        ;
+
+        
+    
+    
+            var circle_marker_7c82c7fc7f9942b09ea888c87eb9d794 = L.circleMarker(
+                [34.093214, -118.3196124],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_b514efc555b24b89bbc4a32c316fdcfb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_745daf08d7534019be088bf2cabd05b0 = $(`<div id="html_745daf08d7534019be088bf2cabd05b0" style="width: 100.0%; height: 100.0%;">Jon Favreau</div>`)[0];
+            popup_b514efc555b24b89bbc4a32c316fdcfb.setContent(html_745daf08d7534019be088bf2cabd05b0);
+        
+
+        circle_marker_7c82c7fc7f9942b09ea888c87eb9d794.bindPopup(popup_b514efc555b24b89bbc4a32c316fdcfb)
+        ;
+
+        
+    
+    
+            var circle_marker_84c5cad45d6840698d2a6d7a79ebf27b = L.circleMarker(
+                [34.2331373, -102.4107493],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_617f2d61bbab467c9b6b7afb91dc0fe1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6028a25601ba4e68bd3dfc9045d7a4a6 = $(`<div id="html_6028a25601ba4e68bd3dfc9045d7a4a6" style="width: 100.0%; height: 100.0%;">Quillette</div>`)[0];
+            popup_617f2d61bbab467c9b6b7afb91dc0fe1.setContent(html_6028a25601ba4e68bd3dfc9045d7a4a6);
+        
+
+        circle_marker_84c5cad45d6840698d2a6d7a79ebf27b.bindPopup(popup_617f2d61bbab467c9b6b7afb91dc0fe1)
+        ;
+
+        
+    
+    
+            var circle_marker_abdf620e9ff041bd892704dd0f00efe9 = L.circleMarker(
+                [43.7283874, -79.34914879325001],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_3bf0009b67684d25b1f62138476c0dbf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0c7d43587d3487095b46f3b204db5fc = $(`<div id="html_b0c7d43587d3487095b46f3b204db5fc" style="width: 100.0%; height: 100.0%;">National Geographic</div>`)[0];
+            popup_3bf0009b67684d25b1f62138476c0dbf.setContent(html_b0c7d43587d3487095b46f3b204db5fc);
+        
+
+        circle_marker_abdf620e9ff041bd892704dd0f00efe9.bindPopup(popup_3bf0009b67684d25b1f62138476c0dbf)
+        ;
+
+        
+    
+    
+            var circle_marker_9643a71b3990484e9ce9922ba8b09257 = L.circleMarker(
+                [37.4519671, -122.1779927],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_d6f7e4747ee3433884b36fc7495a3b5f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_65f872f5ef2a4e24a1820542d2821827 = $(`<div id="html_65f872f5ef2a4e24a1820542d2821827" style="width: 100.0%; height: 100.0%;">Marc Andreessen</div>`)[0];
+            popup_d6f7e4747ee3433884b36fc7495a3b5f.setContent(html_65f872f5ef2a4e24a1820542d2821827);
+        
+
+        circle_marker_9643a71b3990484e9ce9922ba8b09257.bindPopup(popup_d6f7e4747ee3433884b36fc7495a3b5f)
+        ;
+
+        
+    
+    
+            var circle_marker_b7f263822a1849ecb247aeb952e7c6ee = L.circleMarker(
+                [42.3602534, -71.0582912],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_9735b24a275c4a8190cc619b22b79b51 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c8705b427a67470bba6c0c97c91cef7e = $(`<div id="html_c8705b427a67470bba6c0c97c91cef7e" style="width: 100.0%; height: 100.0%;">Ken Levine</div>`)[0];
+            popup_9735b24a275c4a8190cc619b22b79b51.setContent(html_c8705b427a67470bba6c0c97c91cef7e);
+        
+
+        circle_marker_b7f263822a1849ecb247aeb952e7c6ee.bindPopup(popup_9735b24a275c4a8190cc619b22b79b51)
+        ;
+
+        
+    
+    
+            var circle_marker_00bf5d0ebae243a5b60c6dbb3dce17df = L.circleMarker(
+                [39.9527237, -75.1635262],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_943d248d5efa484192e1a92b7d88e4eb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d73e603510744d29b7df13f964cdabe1 = $(`<div id="html_d73e603510744d29b7df13f964cdabe1" style="width: 100.0%; height: 100.0%;">Niche Gamer</div>`)[0];
+            popup_943d248d5efa484192e1a92b7d88e4eb.setContent(html_d73e603510744d29b7df13f964cdabe1);
+        
+
+        circle_marker_00bf5d0ebae243a5b60c6dbb3dce17df.bindPopup(popup_943d248d5efa484192e1a92b7d88e4eb)
+        ;
+
+        
+    
+    
+            var circle_marker_dae176b311e74aa3b29e3cae7bb52797 = L.circleMarker(
+                [34.0536909, -118.2427666],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_5a4d7a6fc19641018ceffa15652daadc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d80cea8a7774dbeac2220c1c7cf5d1f = $(`<div id="html_0d80cea8a7774dbeac2220c1c7cf5d1f" style="width: 100.0%; height: 100.0%;">Lisa Joy, The Boring Company</div>`)[0];
+            popup_5a4d7a6fc19641018ceffa15652daadc.setContent(html_0d80cea8a7774dbeac2220c1c7cf5d1f);
+        
+
+        circle_marker_dae176b311e74aa3b29e3cae7bb52797.bindPopup(popup_5a4d7a6fc19641018ceffa15652daadc)
+        ;
+
+        
+    
+    
+            var circle_marker_bbc6e3ab29ee4c7698204c4176385b12 = L.circleMarker(
+                [47.6038321, -122.3300624],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_53992d37bf154591bcd77d596f531c80 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d2d9fc9d71a4cc089c5626d9902dd83 = $(`<div id="html_8d2d9fc9d71a4cc089c5626d9902dd83" style="width: 100.0%; height: 100.0%;">GeekWire</div>`)[0];
+            popup_53992d37bf154591bcd77d596f531c80.setContent(html_8d2d9fc9d71a4cc089c5626d9902dd83);
+        
+
+        circle_marker_bbc6e3ab29ee4c7698204c4176385b12.bindPopup(popup_53992d37bf154591bcd77d596f531c80)
+        ;
+
+        
+    
+    
+            var circle_marker_9ca1e8bf900d411082384d122c195a5c = L.circleMarker(
+                [36.5781394, -79.35764141408603],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_4e96ff986fe84e8580a31ef1a81e626c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d23209ac64b04b8b97eaae4a4fdf844d = $(`<div id="html_d23209ac64b04b8b97eaae4a4fdf844d" style="width: 100.0%; height: 100.0%;">SwiftOnSecurity</div>`)[0];
+            popup_4e96ff986fe84e8580a31ef1a81e626c.setContent(html_d23209ac64b04b8b97eaae4a4fdf844d);
+        
+
+        circle_marker_9ca1e8bf900d411082384d122c195a5c.bindPopup(popup_4e96ff986fe84e8580a31ef1a81e626c)
+        ;
+
+        
+    
+    
+            var circle_marker_780bfb95b49946d69d9e0984c95e4088 = L.circleMarker(
+                [34.1476452, -118.1444779],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_1e5f0b40bd1e4a6a9f3bcab2529439ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c412b2223364425aaa88cf7b3965e138 = $(`<div id="html_c412b2223364425aaa88cf7b3965e138" style="width: 100.0%; height: 100.0%;">NASA JPL</div>`)[0];
+            popup_1e5f0b40bd1e4a6a9f3bcab2529439ad.setContent(html_c412b2223364425aaa88cf7b3965e138);
+        
+
+        circle_marker_780bfb95b49946d69d9e0984c95e4088.bindPopup(popup_1e5f0b40bd1e4a6a9f3bcab2529439ad)
+        ;
+
+        
+    
+    
+            var circle_marker_ed165d76458d49c78798df0a2f331ccb = L.circleMarker(
+                [39.7837304, -100.4458825],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_30ca5c3cda9440d89d50dc410a25f7d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c927a310e8c74ab0915fde6bc1b69012 = $(`<div id="html_c927a310e8c74ab0915fde6bc1b69012" style="width: 100.0%; height: 100.0%;">Kimbal Musk, Techmeme, TeslaRoadTrip</div>`)[0];
+            popup_30ca5c3cda9440d89d50dc410a25f7d7.setContent(html_c927a310e8c74ab0915fde6bc1b69012);
+        
+
+        circle_marker_ed165d76458d49c78798df0a2f331ccb.bindPopup(popup_30ca5c3cda9440d89d50dc410a25f7d7)
+        ;
+
+        
+    
+    
+            var circle_marker_28ac7c41407b48e3a209c65aef296440 = L.circleMarker(
+                [45.9683338, -61.4901355],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_b48d8650dbb542c0b72cd8415426f877 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cfc4897818594aea901915efb425fefb = $(`<div id="html_cfc4897818594aea901915efb425fefb" style="width: 100.0%; height: 100.0%;">Hyperloop, SpaceX</div>`)[0];
+            popup_b48d8650dbb542c0b72cd8415426f877.setContent(html_cfc4897818594aea901915efb425fefb);
+        
+
+        circle_marker_28ac7c41407b48e3a209c65aef296440.bindPopup(popup_b48d8650dbb542c0b72cd8415426f877)
+        ;
+
+        
+    
+    
+            var circle_marker_47f2485f3b6c4ac383e41e85861d73f8 = L.circleMarker(
+                [54.7023545, -3.2765753],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_0e692862841e40e2af9569fec04f058f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_020b6dd9427c4c07aadeaaa8644b2aee = $(`<div id="html_020b6dd9427c4c07aadeaaa8644b2aee" style="width: 100.0%; height: 100.0%;">DEVELOP, Neuroskeptic</div>`)[0];
+            popup_0e692862841e40e2af9569fec04f058f.setContent(html_020b6dd9427c4c07aadeaaa8644b2aee);
+        
+
+        circle_marker_47f2485f3b6c4ac383e41e85861d73f8.bindPopup(popup_0e692862841e40e2af9569fec04f058f)
+        ;
+
+        
+    
+    
+            var circle_marker_9d7fb5671dbc4cc180e4e229993a54c7 = L.circleMarker(
+                [19.37218875, -72.33465445105234],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_b844b62cace4435291cc2a99ff4b08e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c7c46fa51b443f0bff7162c1f9d6a44 = $(`<div id="html_2c7c46fa51b443f0bff7162c1f9d6a44" style="width: 100.0%; height: 100.0%;">The Hacker News</div>`)[0];
+            popup_b844b62cace4435291cc2a99ff4b08e9.setContent(html_2c7c46fa51b443f0bff7162c1f9d6a44);
+        
+
+        circle_marker_9d7fb5671dbc4cc180e4e229993a54c7.bindPopup(popup_b844b62cace4435291cc2a99ff4b08e9)
+        ;
+
+        
+    
+    
+            var circle_marker_716652796cd54bb8bb0133a04ed51e0d = L.circleMarker(
+                [46.9599823, 22.0541733],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_14b061479564436a9afc1533d3a866ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d9e73e0d71c748cea91a74e064d17997 = $(`<div id="html_d9e73e0d71c748cea91a74e064d17997" style="width: 100.0%; height: 100.0%;">Atlas Obscura</div>`)[0];
+            popup_14b061479564436a9afc1533d3a866ea.setContent(html_d9e73e0d71c748cea91a74e064d17997);
+        
+
+        circle_marker_716652796cd54bb8bb0133a04ed51e0d.bindPopup(popup_14b061479564436a9afc1533d3a866ea)
+        ;
+
+        
+    
+    
+            var circle_marker_ad7fc6ffd8aa437fa6db6c573ca6a1df = L.circleMarker(
+                [51.6878246, -114.2502063],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_7853c360504c408480d4b2ebbba9685f);
+        
+    
+        var popup_587de6e333f845809c0d64fb8a3f02a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3389b99650e94cf18cea5da0c0157b97 = $(`<div id="html_3389b99650e94cf18cea5da0c0157b97" style="width: 100.0%; height: 100.0%;">Khan Academy</div>`)[0];
+            popup_587de6e333f845809c0d64fb8a3f02a7.setContent(html_3389b99650e94cf18cea5da0c0157b97);
+        
+
+        circle_marker_ad7fc6ffd8aa437fa6db6c573ca6a1df.bindPopup(popup_587de6e333f845809c0d64fb8a3f02a7)
         ;
 
         

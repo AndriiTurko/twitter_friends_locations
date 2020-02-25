@@ -1,4 +1,5 @@
 import folium
+from folium.plugins import MarkerCluster
 import twitter2
 from geopy.geocoders import Nominatim
 
@@ -18,29 +19,58 @@ def get_coordinates(location):
         return None
 
 
+def color_change(elev):
+    if(elev < 3):
+        return('green')
+    elif(3 <= elev < 7):
+        return('orange')
+    else:
+        return('red')
+
+
 def build_map(user_name):
     '''
     Builds map with user's friends locations.
     '''
     print('')
     users_info = twitter2.get_json(user_name)['users']
-    locations = [(users_info[i]['screen_name'], users_info[i]['location'])
-           for i in range(len(users_info))]
+    
+    locations = {}
+    for i in range(len(users_info)):
+        location = users_info[i]['location']
+        if location not in locations and location != '':
+            locations[location] = users_info[i]['name']
+        elif location != '':
+            locations[location] = \
+            locations[location] + \
+            ', ' + users_info[i]['name']
+  
+    dicti_coor = {}
+    for i in locations:
+        coor = get_coordinates(i)
+        if coor not in dicti_coor and coor != None:
+            dicti_coor[coor] = locations[i]
+        elif coor != None:
+            dicti_coor[coor] = dicti_coor[coor] + ', ' + locations[i]
 
-    lst = [(locations[i][0], get_coordinates(locations[i][1]))
-           for i in range(len(locations))
-           if locations[i][0] != '' and locations[i][1] != '']
-    for el in lst:
-        if el[1] is None:
-            lst.pop(lst.index(el))
-    user_map = folium.Map()
-    for i in range(len(lst)):
-        location = lst[i][1]
-        user_map.add_child(folium.Marker(location=[float(location[0]),
-                                         float(location[1])],
-                                         popup=lst[i][0],
-                                         icon=folium.Icon(color='green')))
+    user_map = folium.Map(tiles = "CartoDB dark_matter")
+    
+    marker_cluster = MarkerCluster().add_to(user_map)
+    for loc in dicti_coor:
+        try:
+            location = loc
+            folium.CircleMarker(
+                location=[float(location[0]),
+                float(location[1])],
+                color=color_change(len(dicti_coor[loc].split(', '))),
+                popup=dicti_coor[loc],
+                fill_color='black', fill_opacity = 0.9,
+                radius = 10,
+                title=str(len(dicti_coor[loc].split(', ')))).add_to(marker_cluster)
+        except:
+            continue
 
     user_map.save('templates/friends.html')
 
 
+# build_map('notworthcandle')

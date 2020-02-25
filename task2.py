@@ -29,6 +29,7 @@ def main():
         print('Empty data')
     else:
         print(dicti)
+        return dicti
 
 
 if __name__ == "__main__":
